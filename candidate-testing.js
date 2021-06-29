@@ -18,6 +18,7 @@ function askForName() {
 let info = input.question ("What is your name? ")
   candidateName = info ;
   console.log ("Welcome, " + info)
+  
 }
 
 function askQuestion() {
@@ -83,6 +84,8 @@ function quizResults() {
     let wholeAnswer = `${questionLine} \n ${yourAnswer} \n ${correctAnswer}`
     allQuestions = allQuestions + wholeAnswer + "\n"+"\n"
   } 
+  console.log("\n \n")
+  console.log("Candidate Name: " + candidateName)
   console.log(allQuestions)
 }
 
@@ -92,8 +95,6 @@ function runProgram() {
   
   askQuestion();
   //gradeQuiz(this.candidateAnswers);
-  console.log ("\n" + "\n")
-  console.log("Candidate Name: " + candidateName)
   quizResults()
   console.log(gradeQuiz())
 }
